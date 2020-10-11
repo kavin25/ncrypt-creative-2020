@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:start":"nodemon index"
+    "dev:start": "nodemon bin/serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "node-cron": "^2.0.3"
+    "node-cron": "^2.0.3",
+    "nodemailer": "^6.4.13"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
