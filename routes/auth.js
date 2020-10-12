@@ -8,7 +8,7 @@ router.get(
   passport.authenticate("github", { failureRedirect: "/" }),
   function (_req, res) {
     // Successful authentication, redirect home.
-    res.send("logged in");
+    res.redirect("/dashboard");
   }
 );
 
