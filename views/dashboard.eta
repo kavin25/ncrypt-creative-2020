@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= it.user.username %> | DevLetter</title>
+  </head>
+
+  <body>
+    <nav>DevLetter</nav>
+
+    <div class="profile">
+      <div class="image">
+        <img src="<%= it.user.photo %>" alt="<%= it.user.username %>" />
+      </div>
+
+      <div class="meta">
+        <div class="name"><%= it.user.displayName %></div>
+        <div class="username">@<%= it.user.username %></div>
+        <div class="location"><%= it.user.location %></div>
+        <div class="company"><%= it.user.company %></div>
+        <div class="bio"><%= it.user.bio %></div>
+      </div>
+
+      <div class="logout">
+        <a class="btn-secondary" href="/auth/logout">Logout</a>
+        <a class="btn-secondary" href="/auth/unsub">Unsubscribe</a>
+      </div>
+    </div>
+
+    <div class="email new">
+      <p>Next email in 4 days</p>
+      <a class="btn-primary" href="/dashboard/new">Send one now</a>
+    </div>
+
+    <% if (it.emails.length === 0) { %>
+    <div class="email flex center">
+      You have no emails. Try sending one now!
+    </div>
+    <% } else { %>
+    <div class="email">some emails</div>
+    <% } %>
+  </body>
+</html>
